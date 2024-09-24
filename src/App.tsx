@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import { flushSync } from 'react-dom'
 
@@ -11,7 +9,12 @@ useEffect(() => {
 },[])
 
 
-
+    // Default: "default",
+    // Vertical: "vertical",
+    // Wipe: "wipe",
+    // Slides: "slides",
+    // Flip: "flip",
+    // Angled: "angled",
 
   return (
     <div id="" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh'}}>
@@ -46,8 +49,13 @@ useEffect(() => {
       </button>
       <div className="select">
         <select onChange={(e) => (document.documentElement.dataset.style = e.target.value)}>
+          <option value="default">Default</option>
           <option value="vertical">Vertical</option>
           <option value="wipe">Wipe</option>
+          <option value="angled">Angled</option>
+          <option value="flip">Flip</option>
+          <option value="slides">Slides</option>
+
         </select>
       </div>
       <main>
