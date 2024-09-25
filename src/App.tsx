@@ -1,26 +1,27 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import { flushSync } from 'react-dom'
 
 function App() {
-const [dark, setDark] = useState(false)
-useEffect(() => {
-  document.documentElement.dataset.style="angled"
-},[])
-
-
-    // Default: "default",
-    // Vertical: "vertical",
-    // Wipe: "wipe",
-    // Slides: "slides",
-    // Flip: "flip",
-    // Angled: "angled",
-
+  const [dark, setDark] = useState(false);
+  // transition options defined in the css-transitions
+  // Default: "default",
+  // Vertical: "vertical",
+  // Wipe: "wipe",
+  // Slides: "slides",
+  // Flip: "flip",
+  // Angled: "angled",
+  useEffect(() => {
+    // set the data-style attribute
+    document.documentElement.dataset.style = "deault";
+  }, []);
   return (
-    <div id="" style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh'}}>
+    <div
+      id=""
+      style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
       <button
         onClick={() => {
           setDark(!dark);
+          // sstart a view transition that chamges the data-theme attribute
           document.startViewTransition(() => {
             flushSync(() => {
               document.documentElement.dataset.theme = dark ? "dark" : "light";
@@ -55,7 +56,6 @@ useEffect(() => {
           <option value="angled">Angled</option>
           <option value="flip">Flip</option>
           <option value="slides">Slides</option>
-
         </select>
       </div>
       <main>
