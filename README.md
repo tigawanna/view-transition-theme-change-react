@@ -1,8 +1,13 @@
 # View transition theme animations 
 
 Add cool effect when trnsitionning from light to dark mode using css and view transitions 
+
 > [copied from @jhey on twitter](https://codepen.io/jh3y/pen/BaggYwa)
-> 
+
+
+<video width="320" height="240" controls>
+  <source src="https://github.com/tigawanna/view-transition-theme-change-react/blob/main/public/view-transitions.mp4" type="video/mp4">
+</video>
 
 >[!NOTE]
 > This assumes you've already have your dark light mode setup with some sort of function to update your theme
